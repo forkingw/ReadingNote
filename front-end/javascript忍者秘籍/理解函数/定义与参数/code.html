@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>定义与参数</title>
+</head>
+<body>
+    <script>
+        function isPrime(value) {
+            if (!isPrime.answers) {
+                isPrime.answers = {};
+            }
+            if (isPrime.answers[value] !== undefined) {
+                return isPrime.answers[value];
+            }
+            var prime = value !== 0 && value !== 1;
+            for (var i = 0; i < value; i++) {
+                if (value % i === 0) {
+                    prime = false;
+                    break;
+                }
+            }
+            return isPrime.answers[value] = prime;
+        }
+
+        console.log(isPrime(5), "5 is prime!");
+        console.log(isPrime.answers[5], "The answer was cached!")
+
+
+
+        // var store = {
+        //     nextId: 1,
+        //     cache: {},
+        //     add: function(fn) {
+        //         if (!fn.id) {
+        //             fn.id = this.nextId++;
+        //             this.cache[fn.id] = fn;
+        //             return true;
+        //         }
+        //     }
+        // }
+
+        // function ninja() {}
+        // console.log(store.add(ninja), "Function was safely added");
+
+        // console.log(!store.add(ninja), "But it was only added once.")
+
+
+        // var ninja = {}
+        // ninja.name = "hitsuke";
+
+        // var wieldSword = function () {};
+        // wieldSword.swordType = "katana";
+    </script>
+</body>
+</html>

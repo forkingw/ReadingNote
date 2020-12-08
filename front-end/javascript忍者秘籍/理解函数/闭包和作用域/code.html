@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>闭包和作用域</title>
+</head>
+<body>
+    <!-- <div id="box1">First Box</div> -->
+    <script>
+        // var a = 3;
+        // var a = function a() {}
+        // console.log(a)
+
+
+
+        // console.log(typeof fun === "function", 'typeof fun === "function"')
+
+        // var fun = 3;
+        
+        // console.log(typeof fun === "number", 'typeof fun === "number"')
+        // function fun() {}
+
+        // console.log(typeof fun === "number", 'typeof fun === "number"')
+
+
+
+        // console.log(typeof fun === "function")
+        // console.log(typeof myFunExpr === "undefined")
+        // console.log(typeof myArror === "undefined")
+
+
+        // function fun () {}
+        // var myFunExpr = function() {}
+        // var myArrow = (x) => x
+
+
+
+        // const GLOBAL_NINJA = "Yoshi"
+
+        // function reportActivity() {
+        //     const functionActivity = "jumping"
+
+        //     for(let i = 1; i < 3; i++) {
+        //         let forMessage = GLOBAL_NINJA + " " + functionActivity
+        //         console.log(forMessage === "Yoshi jumping", "Yoshi is jumping within the fir block")
+        //         console.log(i, "Current loop counter:" +  i)
+        //     }
+
+        //     console.log(i === 3 &&　forMessage === "Yoshi jumping",
+        //     "Loop variables accessible outside of the loop")
+        // }
+
+        // reportActivity()
+
+        // console.log(typeof functionActivity === "undefined"
+        //     && typeof i === "undefined" && typeof forMessage === "undefined",
+        //     "We cannot see function variables outside of a function")
+
+
+
+        // var globalNinja = "Yoshi"
+
+        // function reportActivity() {
+        //     var functionActivity = "jumping"
+
+        //     for(var i = 1; i < 3; i++) {
+        //         var forMessage = globalNinja + " " + functionActivity
+        //         console.log(forMessage === "Yoshi jumping", "Yoshi is jumping within the fir block")
+        //         console.log(i, "Current loop counter:" +  i)
+        //     }
+
+        //     console.log(i === 3 &&　forMessage === "Yoshi jumping",
+        //     "Loop variables accessible outside of the loop")
+        // }
+
+        // reportActivity()
+
+        // console.log(typeof functionActivity === "undefined"
+        //     && typeof i === "undefined" && typeof forMessage === "undefined",
+        //     "We cannot see function variables outside of a function")
+
+
+
+        // const firstConst = "samurai"
+        // console.log(firstConst === "samurai", "firstConst is a samurai")
+        
+        // try {
+        //     firstConst = "ninja";
+        //     console.log("Shouldn't be here")
+        // } catch (e) {
+        //     console.log("An excepition has occurred")
+        // }
+
+        // console.log(firstConst === "samurai", "firstConst is still a samurai")
+
+        // const secondConst = {}
+        // secondConst.weapon = "wakizashi"
+        // console.log(secondConst.weapon === "wakizashi", "We can add new properties")
+
+        // const thirdConst = []
+        // console.log(thirdConst.length === 0, "No items in our array")
+
+        // thirdConst.push("Yoshi")
+
+        // console.log(thirdConst.length === 1, "The array has change")
+
+
+
+        // var ninja = "Muneyoshi"
+        // function skulk() {
+        //     var action = "skulking"
+        //     function report() {
+        //         var reportNum = 3
+        //         for(var i = 0; i< reportNum; i++) {
+        //             console.log(ninja + " " + action + " " + i)
+        //         }
+        //     }
+        //     report()
+        // }
+        // skulk()
+
+
+        // function skulk(ninja) {
+        //     report(ninja + " skulking");
+        //     function report(message) {
+        //         console.log(message);
+        //     }
+        // }
+
+        // skulk("Kuma")
+        // skulk()
+
+
+
+        // function animateIt(elementId) {
+        //     var elem = document.getElementById(elementId);
+        //     elem.style.position = 'absolute';
+        //     var tick = 0;
+        //     var timer = setInterval(function () {
+        //         if (tick < 100) {
+        //             elem.style.left = elem.style.top= tick + 'px';
+        //             tick++;
+        //         }
+        //         else {
+        //             clearInterval(timer);
+        //             console.log("tick === 100", tick === 100)
+        //             console.log("elem", elem)
+        //             console.log("timer", timer)
+        //         }
+        //     }, 10)
+        // }
+
+        // animateIt("box1")
+
+
+
+        // function Ninja() {
+        //     var feints = 0;
+        //     this.getFeints = function() {
+        //         return feints;
+        //     };
+
+        //     this.feint = function() {
+        //         feints++;
+        //     }
+        // }
+
+        // var ninja = new Ninja();
+        // ninja1.feint();
+
+        // console.log("And the private data is inaccessible to us", ninja1.feints === undefined);
+        // console.log("We're able to access the internal fients", ninja.getFeints() ===1);
+
+        // var ninja2 = new Ninja();
+        // console.log("The second ninja object gets", ninja2.getFeints() === 0);
+
+
+
+
+        // var outerValue = "samurai";
+        // var later;
+
+        // function outerFunction () {
+        //     var innerValue = "ninja";
+
+        //     function innerFunction() {
+        //         console.log(outerValue === "samurai");
+        //         console.log(innerValue === "ninja");
+        //     }
+
+        //     later = innerFunction;
+        // }
+
+        // outerFunction();
+
+        // later();
+
+
+
+        // var outerValue = "ninja";
+        // function outerFunction() {
+        //     console.log("I can see the ninja.", outerValue === "ninja")
+        // }
+        // outerFunction();
+    </script>
+</body>
+</html>

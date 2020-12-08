@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>doucment</title>
+</head>
+<body>
+    <script>
+        function Ninja() {}
+        Ninja.message = "Hello";
+
+        const ninja = new Ninja();
+        const a1 = new Ninja();
+        console.log(a1.message);
+
+        // class Person {
+        //     constructor(name) {
+        //         this.name = name;
+        //     }
+        //     dance() {
+        //         return true;
+        //     }
+        // }
+
+        // class Ninja extends Person {
+        //     constructor(name, weapon) {
+        //         super(name);
+        //         this.weapon = weapon;
+        //     }
+        //     wieldWeapon() {
+        //         return true;
+        //     }
+        // }
+
+        // var person = new Person("Bob");
+        // console.log("person", person);
+        // console.log("person instanceof Person", person instanceof Person)
+        // console.log("person.dance", person.dance())
+        // console.log("person.name === 'Bob'", person.name === "Bob")
+        // console.log("person instanceof Ninja", !(person instanceof Ninja))
+        // console.log('"wieldWeapin" in person', "wieldWeapin" in person)
+
+        // var ninja = new Ninja("Yoshi", "Wakizashi")
+        // console.log("ninja", ninja);
+        // console.log("ninja instanceof Ninja", ninja instanceof Ninja);
+        // console.log("ninja.wieldWeapon()", ninja.wieldWeapon())
+        // console.log("ninja.name === Yoshi", ninja.name === "Yoshi")
+        // console.log("ninja.dance", ninja.dance())
+
+        // class Ninja {
+        //     constructor(name, level) {
+        //         this.name = name;
+        //         this.level = level;
+        //     }
+
+        //     swingSword() {
+        //         return true;
+        //     }
+
+        //     static compare(ninja1, ninja2) {
+        //         return ninja1.level - ninja2.level;
+        //     }
+        // }
+
+        // var ninja1 = new Ninja("Yoshi", 4);
+        // var ninja2 = new Ninja("Hattori", 3);
+
+        // console.log('"compare" in ninja1', "compare" in ninja1);
+        // console.log('"compare" in ninja2', "compare" in ninja2);
+        // console.log("Ninja.compare(ninja1, ninja2) > 0", Ninja.compare(ninja1, ninja2) > 0)
+        // console.log('"swingSword" in Ninja', "swingSword" in Ninja);
+
+
+
+        // console.log("ninja instanceof Ninja", ninja instanceof Ninja)
+        // console.log("ninja.name === Yoshi", ninja.name === "Yoshi")
+        // console.log("ninja.swingSword", ninja.swingSword())
+
+        // function Ninja () {}
+        // const ninja = new Ninja();
+        // console.log("ninja instanceof Ninja", ninja instanceof Ninja);
+        // Ninja.prototype = {}
+        // console.log("ninja instanceof Ninja", ninja instanceof Ninja);
+
+        // function Person () {}
+        // Person.prototype.dance = function () {}
+
+        // function Ninja () {}
+        // Ninja.prototype = new Person()
+
+        // Object.defineProperty(Ninja.prototype, "constructor", {
+        //     enumerable: false,
+        //     value: Ninja,
+        //     writable: true
+        // })
+
+        // const ninja = new Ninja()
+
+        // console.log("ninja", ninja);
+
+        // console.log("ninja.constructor === Ninja", ninja.constructor === Ninja)
+        // console.log("ninja instanceof Ninja", ninja instanceof Ninja)
+        // console.log("ninja instanceof Person", ninja instanceof Person)
+        // console.log("ninja instanceof Object", ninja instanceof Object)
+
+        // function A () {}
+        // A.prototype.test = function () {}
+        // function B () {}
+        // inhert(B, A);
+        // console.log(new B())
+        
+        // function inhert(Target, Origin) {
+        //     function F() {}
+        //     F.prototype = Origin.prototype;
+        //     Target.prototype = new F();
+        //     Target.prototype.constuctor = Target;
+        //     Target.prototype.uber = Origin.prototype;
+        // }
+
+        // function Ninja() {}
+
+        // const ninja = new Ninja();
+        // const ninja2 = new ninja.constructor();
+
+        // console.log("ninja2 instanceof Ninja", ninja2 instanceof Ninja)
+        // console.log("ninja != ninja2", ninja != ninja2);
+
+
+
+        // function Ninja() {
+        //     this.swung = true;
+        // }
+
+        // const ninja1 = new Ninja();
+
+        // Ninja.prototype.swingSword = function () {
+        //     return this.swung;
+        // }
+        // console.log("ninja1 instanceof Ninja", ninja1 instanceof Ninja);
+        // console.log("ninja1.constructor === Ninja ", ninja1.constructor === Ninja);
+
+        // Ninja.prototype.pierce = function () {
+        //     return true;
+        // }
+        // Ninja.prototype = {
+        //     pierce: function () {
+        //         return true;
+        //     }
+        // }
+
+
+        // const ninja2 = new Ninja();
+        // console.log("ninja2", ninja2);
+        // function Ninja() {
+        //     this.swung = false;
+        //     this.swingSword = function () {
+        //         return !this.swung;
+        //     }
+        // }
+
+        // Ninja.prototype.swingSword = function () {
+        //     return this.swung;
+        // }
+
+        // const ninja = new Ninja();
+        // console.log("ninja.swingSword()", ninja.swingSword())
+
+
+        // function Ninja() {}
+        // Ninja.prototype.swingSword = function () {
+        //     return true;
+        // }
+
+        // const nanja1 = Ninja();
+        // console.log("nanja1", nanja1);
+
+        // const ninja2 = new Ninja();
+        // console.log("ninja2", ninja2);
+        // console.log("ninja2.swingSword", ninja2.swingSword);
+        // console.log("ninja2.swingSword()", ninja2.swingSword());
+
+        // const yoshi = { skulk: true };
+        // const hattori = { sneak: true };
+        // const kuma = { creep: true };
+
+        // Object.setPrototypeOf(yoshi, hattori);
+        // Object.setPrototypeOf(hattori, kuma);
+
+        // console.log('yoshi', yoshi);
+        // console.log('hattori', hattori);
+        // console.log('kuma', kuma);
+    </script>
+</body>
+</html>
